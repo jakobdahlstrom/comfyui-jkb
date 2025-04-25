@@ -192,6 +192,8 @@ function provisioning_start() {
         "${ESRGAN_MODELS[@]}"
     provisioning_get_workflows
     provisioning_print_end
+    echo "Ensuring latest comfyui-frontend-package is installed..."
+    pip_install --force-reinstall comfyui-frontend-package==1.16.9
 }
 
 function pip_install() {
